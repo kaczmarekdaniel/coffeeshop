@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta name="viewport"
+    content="width=device-width,
+     initial-scale =1" />
+
+     <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+     <script src="node_modules/aos/dist/aos.js"></script> 
+     <link rel="stylesheet" href="style.css">
+        
+     <meta charset="UTF-8">
+    <title>Hello!</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM fully loaded and parsed');
+            AOS.init();
+        });
+        
+      </script>
+    
+</head>
+<body>
+   <section class="landingPage">
+       <header></header>
+       <main>
+           <div data-aos="zoom-in-right">
+               <h1>QUALITY COFFEE</h1>
+               <h2>TO START YOUR DAY</h2>
+               <p>Start your perfect day with our coffee. We collect top quality beans from all over the world. Choose your favourite coffee and order online or visit us.</p>
+               <container>
+                   <button>SEE OUR MENU</button>
+                   <button>SHOP ONLINE</button>
+               </container>
+           </div>
+           <div class="img" data-aos="zoom-in-left" data-aos-delay="100"></div>
+           
+       </main>
+       <footer></footer>
+
+   </section>
+
+</body>
+</html>
+
+
