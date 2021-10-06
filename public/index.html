@@ -14,7 +14,7 @@
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             console.log('DOM fully loaded and parsed');
-            AOS.init();
+            //AOS.init();
         });
         //original design https://dribbble.com/shots/15026093-Coffee-Shop-Website
       </script>
@@ -31,23 +31,43 @@
 
        <main>
            <div class="about" data-aos="zoom-in-right">
-               <h1>QUALITY COFFEE</h1>
-               <h2>TO START YOUR DAY</h2>
-               <p>Start your perfect day with our coffee. We collect top quality beans from all over the world.
-                  We run our online store but you also can come to our coffeeshop and taste coffee classics or try 
-                  seasonal flavors. Choose your favourite coffee and order online or visit us.</p>
-                  <container id='buttonContainer'><button text=''>See our menu</button></container>
-                  <hr style="margin-top: 40px;">
-                  <container>
-                    <h3>Who we are?</h3>
-                    <p>We are coffee lovers from New York, Michael and Rick. In our coffeeshop You can find finest beans from all over the world, served by real passionats.</p>
-                </container> 
+                <container style='height:50%;'>
+                    <h1>QUALITY COFFEE</h1>
+                    <h2>TO START YOUR DAY</h2>
+                    <p>Start your perfect day with our coffee. We collect top quality beans from all over the world.
+                       We run our online store but you also can come to our coffeeshop and taste coffee classics or try 
+                       seasonal flavors. Choose your favourite coffee and order online or visit us.</p>
+                       <container id='buttonContainer'><button id="menuButton" text=''>See our menu</button></container>
+                </container>
+                       <hr style="margin-top: 60px;">
+                       <container>
+                         <h3>Who we are?</h3>
+                         <p>We are coffee lovers from New York, Michael and Rick. In our coffeeshop You can find finest beans from all over the world, served FOR real passionats BY real passionats.</p>
+                     </container> 
                <container>
                    <h3>Where you can find us?</h3>
                    <p> We are waiting for you on 69 Grand Street, Brooklyn. </p>
                </container>
            </div>
-           <div class="img" data-aos="zoom-in-left" data-aos-delay="100"></div>
+           <div class="img" data-aos="zoom-in-left" data-aos-delay="100">
+               <container class="baristaImg"></container>
+               <hr style="margin-top: 60px;">
+
+               <container class="coffeeType">
+                <h3>What we are serving today?</h3>
+                <p>Here we show you what's in our today's offer of cakes and beans</p>
+                <div id='coffeeTypeTable'>
+                    <div id="coffeesMenu">
+                        <h4>Beans</h4>
+                    </div>
+                    <div id="cakesMenu">
+                        <h4>Cakes</h4>
+                        
+                    </div>
+                </div>
+
+               </container>
+           </div>
            
        </main>
        <footer>
@@ -56,7 +76,7 @@
 
    </section>
    <section class="menuPage">
-       <h1>Our menu</h1>
+       <h1 class="ourMenu">Our menu</h1>
     <div class='menuCards'>
         <article>
             <h2>Coffee Classics</h2>
@@ -97,10 +117,6 @@
             $10
             <hr>
 
-           
-
-            
-
             <p>2 x Latte</p>
             $10
             <hr>
@@ -118,6 +134,8 @@
             <hr>
 
             <hr>
+
+            
         </article>
     
         <article>
@@ -154,6 +172,17 @@
 
 
 
+</section>
+<section class="directionsPage">
+    <h3 style="margin:5px;">BROders Coffee</h3>
+    <p  style="margin:5px;">ul. Babińskiego 44</p>
+    <p  style="margin:5px;">Kaliny, 090909 Nowy Jork</p>
+    <div class="directionsIcons">
+        <div class="simIcon"></div>
+        <div class="simIcon"></div>
+        <div class="simIcon"></div>
+    </div>
+    <img src="images/map.png">
 </section>
 
 </body>

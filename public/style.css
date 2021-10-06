@@ -8,13 +8,14 @@
 
 }
 
+body, html {
+    background-color: #54220f;
+}
+
 section {
-    width: calc(100vw - 19px);
     height: auto;
     min-height: 100vh;
     background-color: #eecfb5;
-    border: 10px solid #54220f;
-    border-bottom: 0px;
     padding: 2% 5% 1% 5%;
     display: flex;
     flex-wrap: wrap;
@@ -46,12 +47,11 @@ section {
     height:30px;
     margin: 10px 10px 10px 50px;
     background-color: transparent;
-    transition: ease-in-out .2s;
+    transition: ease-in-out .1s;
     border: none;
     color: #705139;
     font-size:16px;
     font-weight:bold;
-    transition: ease-in-out .2s;
 }
 
 .landingPage header div button:hover {
@@ -88,7 +88,7 @@ section {
     width: 100%;
     min-height: 60vh;
     height: auto;
-    padding: 2%;
+    padding: 2% 10% 1% 10%;
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
@@ -99,14 +99,25 @@ section {
 
 .about {
     width: 100%;
-    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 2%;
     text-align: left;
     color: #705139;
+    border-bottom: none;
 }
+
+#directionsButton {
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 
 
@@ -129,6 +140,10 @@ h3 {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+h4 {
+    font-size:1.5rem;
+}
+
 p {
     margin-top:40px;
     font-weight: 200;
@@ -142,6 +157,8 @@ p {
     align-items: flex-start;
 }
 
+
+
 #buttonContainer{
     width: 100%;
     display: flex;
@@ -150,11 +167,11 @@ p {
 }
 
 .landingPage main button {
+    margin-top:30px;
     width: 200px;
     height:50px;
-   
     background-color: #D4B294;
-    transition: ease-in-out .5s;
+    transition: ease-in-out .3s;
     border: none;
 
 }
@@ -170,6 +187,28 @@ p {
     max-width: 200px;
     height: auto;
     background-size: cover;
+}
+.mapImg {
+    visibility: hidden;
+    width: 100%;
+    height:50%;
+    margin-bottom:0px;
+    background-image: url(images/map.png)
+}
+.coffeeType  {
+ display: flex;
+ justify-content:center;
+ align-items: center;
+}
+
+#coffeeTypeTable {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
 }
 
 
@@ -187,7 +226,7 @@ p {
 
     font-weight: 700;
     font-size:1rem;
-    margin-left: 10px;
+    margin:0px 0px 40px 10px;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -205,7 +244,7 @@ p {
      background-image: url(images/wave-haikei-4.svg);
      background-repeat: no-repeat;
      background-size:cover;
-
+    border-top: none;
  }
 
  
@@ -220,8 +259,9 @@ p {
 }
 .menuPage h1 {
     color:#c2a287;
-    margin-top:50px;
-    font-size:4.5rem;
+    margin-top:30px;
+    margin-bottom: 0px;
+    font-size:3.5rem;
 }
 
  .menuPage article {
@@ -229,7 +269,7 @@ p {
      width: 100%;
      min-height:500px;
      height: 100%;
-     margin:60px;
+     
      padding:30px;
      display: flex;
      align-items: center;
@@ -248,6 +288,43 @@ p {
     margin-top: 100px;
  }
 
+.directionsPage {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    max-height: calc(100vh - 20px);
+    border-bottom: 10px solid #54220f
+}
+
+.directionsPage img {
+    width:75%;
+}
+
+.directionsIcons {
+    width: 20%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 50px 0px 50px;
+}
+
+.simIcon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 50px;
+    background-color: black;
+}
+
+.simIcon:hover {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 45px;
+    background-color: black;
+}
+
+
  hr {
     height:1px;
     background-color: #705139;
@@ -255,19 +332,63 @@ p {
     width: 50%;
 }
 
- 
+html::-webkit-scrollbar {
+    width: 8px; 
+ }
+
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(37, 37, 37);
+  border-radius: 25px;
+}
 
 
 
  @media handheld, screen and (min-width: 1027px) {
 
     .landingPage main .img {
-        background-image: url(images/mainImage.png);
-        width: 100%;
-        background-size:cover;
-        visibility:visible;
+        padding: 0;
     }
 
+    section {
+        border: 10px solid #54220f;
+        border-bottom: 0px;
+
+
+    }
+    .baristaImg {
+        width: 100%;
+        height:50%;
+        background-image: url(images/mainImage.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        visibility:visible;
+
+    }
+    .mapImg {
+        width: 100%;
+        height:50%;
+        margin-bottom:0px;
+        background-image: url(images/map.png)
+    }
+
+    .menuPage article {
+        
+        margin:60px;
+        
+    }
+
+    .menuPage h1 {
+        font-size:3.5rem;
+        margin-bottom:50px;
+    }
+    .about p {
+        margin-right: 50px;
+    }
+    
     .landingPage main div {
         max-width: 50%;
     }
@@ -275,7 +396,9 @@ p {
     .landingPage header div button {
         display: inline;
     }
-    
+    .landingPage main button {
+        margin-top:0px;
+    }
     .menuCards {
         flex-direction: row;
         align-items: flex-start;
@@ -284,10 +407,7 @@ p {
         flex-direction: column;
     }
 
-    .landingPage main div container {
-        margin-top: 5%;
-        
-    }
+    
 
     .img1 {
         display: none;
@@ -301,5 +421,9 @@ p {
     }
     
     
+    
+ }
+
+ @media handheld, screen and (min-width: 1440px) {
     
  }
